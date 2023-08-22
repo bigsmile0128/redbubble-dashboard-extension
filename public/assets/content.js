@@ -1,4 +1,3 @@
-// Add an event listener to listen for messages from the popup
 (async () => {
   const domain = location.href.slice(8, 16);
 
@@ -32,13 +31,15 @@
       document.getElementById("lblTheme").remove();
     }
 
-    document.body.append(nameLabel);
-    document.body.append(themeLabel);
+    if (domain == "material") {
+      document.body.append(nameLabel);
+      document.body.append(themeLabel);
+    }
   });
 
   if (domain == "material") {
     const hiddenBtn = document.createElement("button");
-    const node = document.createTextNode("H");
+    const node = document.createTextNode("-");
     hiddenBtn.appendChild(node);
     hiddenBtn.style.width = "40px";
     hiddenBtn.style.height = "40px";
@@ -79,7 +80,7 @@
   } else {
     const addBtn = document.createElement("button");
     // addBtn.src = "dashboard.png"
-    const node1 = document.createTextNode("A");
+    const node1 = document.createTextNode("✓");
     addBtn.appendChild(node1);
     addBtn.style.width = "40px";
     addBtn.style.height = "40px";
