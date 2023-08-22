@@ -1,0 +1,33 @@
+{
+    "name": "Writesonic",
+    "description": "Writesonic Chrome Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_title": "RedBubble Popup",
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://material-kit-react.devias.io/*",
+                "https://www.redbubble.com/*"
+            ],
+            "js": ["./assets/content.js"],
+            "all_frames": true
+        }
+    ],
+    "permissions": ["activeTab", "scripting"],
+    "icons": {
+        "16": "logo192.png",
+        "48": "logo192.png",
+        "128": "logo192.png"
+    },
+    "background": {
+        "service_worker": "./static/js/background.js"
+    },
+    "host_permissions": [
+        "https://material-kit-react.devias.io/*",
+        "https://www.redbubble.com/*"
+    ]
+}

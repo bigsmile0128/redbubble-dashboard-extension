@@ -1,0 +1,48 @@
+.App {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.x-container {
+    width: 60%;
+    margin: auto;
+}
+
+.row .label,
+.input-form {
+    text-align: left;
+}
+
+.row .input-form input[type="text"] {
+    border-width: 1px;
+    border-color: #465368;
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: #252e3e;
+    transition: border-color 1s;
+}
+
+.row .input-form input[type="text"]:hover {
+    border-width: 1px;
+    border-color: #252e3e;
+}
+
+.row .input-form button {
+    color: #252e3e;
+    border: 0;
+    border-radius: 3px;
+    width: 100%;
+    background-color: #ededed;
+    padding: 3px 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.row .input-form button:hover {
+    color: #414f68;
+    background-color: #c4c1c1;
+}
